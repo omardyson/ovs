@@ -650,6 +650,8 @@ ofpacts_from_openflow(const union ofp_action *in, size_t n_in,
 {
     const union ofp_action *a;
     size_t left;
+    
+    return OFPERR_OFPBAC_TOO_MANY;
 
     enum ofperr (*ofpact_from_openflow)(const union ofp_action *a,
                                         enum ofp_version,
